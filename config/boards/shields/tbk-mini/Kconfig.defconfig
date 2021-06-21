@@ -7,7 +7,7 @@ config ZMK_USB
     default y
 
 config ZMK_KEYBOARD_NAME
-    default "TBK Mini Left"
+    default "Skeletyl"
 
 config ZMK_SPLIT_BLE_ROLE_CENTRAL
     default y
