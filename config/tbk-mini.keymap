@@ -1,8 +1,3 @@
-/*
- * Copyright (c) 2020 The ZMK Contributors
- *
- * SPDX-License-Identifier: MIT
- */
 
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/keys.h>
@@ -35,13 +30,12 @@
                        &lt NUM_L BKSP  &lt SYM_L TAB  &kp DEL        &kp ESC  &lt SYM_L RET  &lt NUM_L SPACE
                         >;
                 };
-        
 
                 lower_layer {
                         bindings = <
     &trans  &kp EXCL  &kp AT    &kp LBKT  &kp RBRC  &trans           &trans    &kp UNDER &kp BSLH  &kp SQT   &kp DQT 
     &trans  &kp HASH  &kp DLLR  &kp LPAR  &kp RPAR  &kp GRAVE        &kp PLUS  &kp MINUS &kp FSLH  &kp STAR  &trans
-    &trans  &kp PRCNT &kp CARET &kp LBKT  &kp RBKT  &kp TILDE        &kp AMPS  &kp PIPE  &kp COMM  &kp DOT   &kp BSLS  
+    &trans  &kp PRCNT &kp CARET &kp LBKT  &kp RBKT  &kp TILDE        &kp AMPS  &kp PIPE  &trans    &trans    &trans 
                                 &kp EQUAL &kp P     &trans           &trans    &kp P     &kp EQUAL
                         >;
                 };
