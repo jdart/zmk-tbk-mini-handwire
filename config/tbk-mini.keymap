@@ -8,35 +8,50 @@
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/bt.h>
 
-// &bt BT_SEL 1
+#define SYM_L 1
+#define NUM_L 2
+
+&lt { quick_tap_ms = <200>; };
 
 / {
+        behaviors {
+                hm: homerow_mods {
+                        compatible = "zmk,behavior-hold-tap";
+                        label = "homerow mods";
+                        #binding-cells = <2>;
+                        tapping_term_ms = <320>;
+                        flavor = "tap-preferred";
+                        bindings = <&kp>, <&kp>;
+                };
+        };
+
         keymap {
                 compatible = "zmk,keymap";
-
                 default_layer {
                         bindings = <
-    &bt BT_CLR &kp W    &kp E     &kp R     &kp T         &kp Y     &kp U     &kp I     &kp O     &kp P   
-    &kp A    &kp S    &kp D     &kp F     &kp G         &kp H     &kp J     &kp K     &kp L     &kp SEMI
-    &kp Z    &kp X    &kp C     &kp V     &kp B         &kp N     &kp M     &kp COMMA &kp DOT   &kp FSLH
-                      &kp LGUI  &kp DEL   &kp RET       &kp SPACE &kp ESC   &kp RET
+    &kp Q       &kp W       &kp E        &kp R        &kp T          &kp Y    &kp U        &kp I        &kp O       &kp P      
+    &hm LALT A  &hm LGUI S  &hm LSHFT D  &hm LCTRL F  &kp G          &kp H    &hm RCTRL J  &hm RSHFT K  &hm LGUI L  &hm RALT QUOT
+    &kp Z       &kp X       &kp C        &kp V        &kp B          &kp N    &kp M        &kp COMMA    &kp DOT     &kp FSLH   
+                       &lt NUM_L BKSP  &lt SYM_L TAB  &kp DEL        &kp ESC  &lt SYM_L RET  &lt NUM_L SPACE
                         >;
                 };
+        
+
                 lower_layer {
                         bindings = <
-    &kp Q    &kp W    &kp E     &kp R     &kp T         &kp Y     &kp U     &kp I     &kp O     &kp P   
-    &kp A    &kp S    &kp D     &kp F     &kp G         &kp H     &kp J     &kp K     &kp L     &kp SEMI
-    &kp Z    &kp X    &kp C     &kp V     &kp B         &kp N     &kp M     &kp COMMA &kp DOT   &kp FSLH
-                      &kp LGUI  &kp DEL   &kp RET       &kp SPACE &kp ESC   &kp RET
+    &trans  &kp EXCL  &kp AT    &kp LBKT  &kp RBRC  &trans           &trans    &kp UNDER &kp BSLH  &kp SQT   &kp DQT 
+    &trans  &kp HASH  &kp DLLR  &kp LPAR  &kp RPAR  &kp GRAVE        &kp PLUS  &kp MINUS &kp FSLH  &kp STAR  &trans
+    &trans  &kp PRCNT &kp CARET &kp LBKT  &kp RBKT  &kp TILDE        &kp AMPS  &kp PIPE  &kp COMM  &kp DOT   &kp BSLS  
+                                &kp EQUAL &kp P     &trans           &trans    &kp P     &kp EQUAL
                         >;
                 };
 
                 raise_layer {
                         bindings = <
-    &kp Q    &kp W    &kp E     &kp R     &kp T         &kp Y     &kp U     &kp I     &kp O     &kp P   
-    &kp A    &kp S    &kp D     &kp F     &kp G         &kp H     &kp J     &kp K     &kp L     &kp SEMI
-    &kp Z    &kp X    &kp C     &kp V     &kp B         &kp N     &kp M     &kp COMMA &kp DOT   &kp FSLH
-                      &kp LGUI  &kp DEL   &kp RET       &kp SPACE &kp ESC   &kp RET
+    &trans      &kp 7      &kp 8       &kp 9      &trans             &trans    &trans    &trans    &reset   &bootloader 
+    &trans      &kp 4      &kp 5       &kp 6      &trans             &kp LARW  &kp DARW  &kp UARW  &kp RARW &trans 
+    &kp 0       &kp 1      &kp 2       &kp 3      &trans             &trans    &trans    &trans    &trans   &trans 
+                           &kp EQUAL   &kp P      &trans             &trans    &kp P     &kp EQUAL
                         >;
                 };
         };
