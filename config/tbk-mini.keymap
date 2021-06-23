@@ -44,7 +44,7 @@
                         bindings = <
     &trans      &kp 7      &kp 8       &kp 9      &trans             &trans    &trans    &trans    &reset   &bootloader 
     &trans      &kp 4      &kp 5       &kp 6      &trans             &kp LARW  &kp DARW  &kp UARW  &kp RARW &trans 
-    &kp 0       &kp 1      &kp 2       &kp 3      &trans             &trans    &trans    &trans    &trans   &trans 
+    &kp 0       &kp 1      &kp 2       &kp 3      &trans             &trans    &trans    &trans    &trans   &bt BT_CLR 
                            &kp EQUAL   &kp P      &trans             &trans    &kp P     &kp EQUAL
                         >;
                 };
