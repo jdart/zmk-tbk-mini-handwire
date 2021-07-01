@@ -6,7 +6,7 @@
 #define SYM_L 1
 #define NUM_L 2
 
-&lt { quick_tap_ms = <200>; };
+&lt { quick_tap_ms = <150>; };
 
 / {
         behaviors {
@@ -24,28 +24,28 @@
                 compatible = "zmk,keymap";
                 default_layer {
                         bindings = <
-    &kp Q       &kp W       &kp E        &kp R        &kp T          &kp Y    &kp U        &kp I        &kp O       &kp P      
-    &hm LALT A  &hm LGUI S  &hm LSHFT D  &hm LCTRL F  &kp G          &kp H    &hm RCTRL J  &hm RSHFT K  &hm LGUI L  &hm RALT SEMI
-    &kp Z       &kp X       &kp C        &kp V        &kp B          &kp N    &kp M        &kp COMMA    &kp DOT     &kp FSLH   
-                       &lt NUM_L BKSP  &lt SYM_L TAB  &kp DEL        &kp ESC  &lt SYM_L RET  &lt NUM_L SPACE
+    &kp Q       &kp W       &kp E         &kp R        &kp T          &kp Y    &kp U        &kp I        &kp O       &kp P      
+    &hm LALT A  &hm LGUI S  &hm LSHFT D   &hm LCTRL F  &kp G          &kp H    &hm RCTRL J  &hm RSHFT K  &hm LGUI L  &hm RALT SEMI
+    &kp Z       &kp X       &kp C         &kp V        &kp B          &kp N    &kp M        &kp COMMA    &kp DOT     &kp FSLH   
+                            &lt NUM_L RET &lt SYM_L    &trans         &trans   &lt SYM_L    &lt NUM_L SPACE
                         >;
                 };
 
-                lower_layer {
+                symbol_layer {
                         bindings = <
-    &kp EXCL  &kp AT    &kp LBRC  &kp RBRC  &trans           &trans    &kp UNDER &kp BSLH  &kp SQT     &kp DQT
-    &kp HASH  &kp DLLR  &kp LPAR  &kp RPAR  &kp GRAVE        &kp PLUS  &kp MINUS &kp FSLH  &kp STAR    &kp LS(DQT)
-    &kp PRCNT &kp CARET &kp LBKT  &kp RBKT  &kp TILDE        &kp AMPS  &kp PIPE  &trans    &trans      &kp SQT
-                                &kp EQUAL &kp P     &trans           &trans    &kp P     &kp EQUAL
+    &kp EXCL    &kp AT     &kp LBRC  &kp RBRC  &trans           &trans    &kp UNDER  &kp BSLH   &kp SQT     &kp DQT
+    &kp HASH    &kp DLLR   &kp LPAR  &kp RPAR  &kp GRAVE        &kp PLUS  &kp MINUS  &kp FSLH   &kp STAR    &trans
+    &kp PRCNT   &kp CARET  &kp LBKT  &kp RBKT  &kp TILDE        &kp AMPS  &kp PIPE   &kp EQUAL  &kp TAB     &kp ESC
+                           &trans    &trans    &trans           &trans    &trans     &trans
                         >;
                 };
 
-                raise_layer {
+                number_layer {
                         bindings = <
     &trans      &kp N7      &kp N8       &kp N9      &trans             &trans    &trans    &trans    &trans      &trans     
     &trans      &kp N4      &kp N5       &kp N6      &trans             &kp LARW  &kp DARW  &kp UARW  &kp RARW    &trans 
     &kp N0      &kp N1      &kp N2       &kp N3      &trans             &trans    &trans    &reset    &bootloader &bt BT_CLR 
-                           &kp EQUAL   &kp P      &trans             &trans    &kp P     &kp EQUAL
+                            &trans       &trans      &trans             &trans    &trans    &trans
                         >;
                 };
         };
