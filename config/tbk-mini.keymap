@@ -6,7 +6,7 @@
 #define SYM_L 1
 #define NUM_L 2
 
-&lt { quick_tap_ms = <150>; };
+&lt { quick_tap_ms = <50>; };
 
 / {
         behaviors {
@@ -14,7 +14,7 @@
                         compatible = "zmk,behavior-hold-tap";
                         label = "homerow mods";
                         #binding-cells = <2>;
-                        tapping_term_ms = <220>;
+                        tapping_term_ms = <150>;
                         flavor = "balanced";
                         bindings = <&kp>, <&kp>;
                 };
