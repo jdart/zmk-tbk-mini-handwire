@@ -27,7 +27,7 @@
     &kp Q       &kp W       &lt SYM_L E    &kp R        &kp T          &kp Y    &kp U         &lt SYM_L I  &kp O       &kp P      
     &hm LALT A  &hm LGUI S  &hm LSHFT D    &hm LCTRL F  &kp G          &kp H    &hm RCTRL J   &hm RSHFT K  &hm LGUI L  &hm RALT SEMI
     &kp Z       &kp X       &kp C          &kp V        &kp B          &kp N    &kp M         &kp COMMA    &kp DOT     &kp FSLH   
-                            &lt NUM_L BKSP &kp TAB      &trans         &trans   &kb RET       &lt NUM_L SPACE
+                            &lt NUM_L BKSP &kp TAB      &trans         &trans   &kp RET       &lt NUM_L SPACE
                         >;
                 };
 
