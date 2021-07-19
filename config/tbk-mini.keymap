@@ -18,6 +18,30 @@
                         flavor = "balanced";
                         bindings = <&kp>, <&kp>;
                 };
+
+                combos {        
+                        compatible = "zmk,combos";        
+                        c_lalt {            
+                                timeout-ms = <50>;            
+                                key-positions = <2 1>, <2 2>;            
+                                bindings = <&sk LALT>;        
+                        };                         
+                        c_lgui {            
+                                timeout-ms = <50>;            
+                                key-positions = <2 2>, <2 3>;            
+                                bindings = <&sk LGUI>;        
+                        };                 
+                        c_laltgui {            
+                                timeout-ms = <50>;            
+                                key-positions = <2 1>, <2 2>, <2 3>;            
+                                bindings = <&sk LA(LGUI)>;        
+                        }; 
+                        c_lctrl {            
+                                timeout-ms = <50>;            
+                                key-positions = <2 3>, <2 4>;            
+                                bindings = <&sk LCTRL>;        
+                        };
+                };
         };
 
         keymap {
@@ -25,9 +49,9 @@
                 default_layer {
                         bindings = <
     &kp Q       &kp W        &kp E          &kp R        &kp T          &kp Y    &kp U         &kp I           &kp O       &kp P      
-    &lt SYM_L A &hm LGUI S   &hm LSHFT D    &hm LCTRL F  &kp G          &kp H    &hm RCTRL J   &hm RSHFT K     &hm LGUI L  &lt SYM_L SEMI
-    &kp Z       &kp X        &kp C          &hm LALT V   &kp B          &kp N    &hm RALT M    &kp COMMA       &kp DOT     &kp FSLH   
-                             &lt NUM_L BKSP &kp TAB      &trans         &trans   &kp RET       &lt NUM_L SPACE
+    &kp A       &kp S        &kp D          &kp F        &kp G          &kp H    &kp J         &kp K           &kp L       &kp SEMI
+    &kp Z       &kp X        &kp C          &hm LALT V   &kp B          &kp N    &kp M         &kp COMMA       &kp DOT     &kp FSLH   
+                             &lt NUM_L BKSP &lt SYM_L TAB      &trans         &trans   &lt SYM_L RET  &lt NUM_L SPACE
                         >;
                 };
 
