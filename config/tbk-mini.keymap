@@ -23,22 +23,22 @@
                         compatible = "zmk,combos";        
                         c_lalt {            
                                 timeout-ms = <50>;            
-                                key-positions = <2 1>, <2 2>;            
+                                key-positions = <20 21>;            
                                 bindings = <&sk LALT>;        
                         };                         
                         c_lgui {            
                                 timeout-ms = <50>;            
-                                key-positions = <2 2>, <2 3>;            
+                                key-positions = <21 22>;            
                                 bindings = <&sk LGUI>;        
                         };                 
                         c_laltgui {            
                                 timeout-ms = <50>;            
-                                key-positions = <2 1>, <2 2>, <2 3>;            
+                                key-positions = <20 21 22>;            
                                 bindings = <&sk LA(LGUI)>;        
                         }; 
                         c_lctrl {            
                                 timeout-ms = <50>;            
-                                key-positions = <2 3>, <2 4>;            
+                                key-positions = <22 23>;            
                                 bindings = <&sk LCTRL>;        
                         };
                 };
